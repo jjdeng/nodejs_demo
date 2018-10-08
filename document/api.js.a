@@ -1,0 +1,17 @@
+let express = require('express')
+let path = require('path')
+let http = require('http')
+let proxy = require('http-proxy-middleware')
+let fs = require('fs')
+let app = express()
+//app.use("/doc", express.static('doc'))
+app.use("/doc", express.static(path.join(__dirname,'doc')))
+//设置端口号
+app.set('port', 8102)
+// 代理重定向
+app.use('/sysManage/*', proxy('/sysManage', {target: 'http://192.168.0.129:8002',  changeOrigin: true}))
+
+//启动及端口
+http.createServer(app).listen(app.get('port'),function(){
+    console.log('Express server listening on port ' + app.get('port'))
+})

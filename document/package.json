@@ -1,0 +1,24 @@
+{
+  "name": "api-doc",
+  "version": "1.0.0",
+  "description": "api demo",
+  "scripts": {
+    "make": "apidoc -i ../manage/config/ -i ../manage/dal/ -i src/ -o doc/",
+    "start": "node api.js"
+  },
+  "author": "fish",
+  "license": "ISC",
+  "devDependencies": {
+    "apidoc": "^0.17.6",
+    "http-proxy-middleware": "^0.17.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "depd": "^1.1.2",
+    "encodeurl": "^1.0.2",
+    "express": "^4.16.3",
+    "finalhandler": "^1.1.0",
+    "merge-descriptors": "^1.0.1"
+  }
+}

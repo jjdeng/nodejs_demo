@@ -1,0 +1,14 @@
+{
+  "name": "xuexiyou",
+  "version": "1.0.0",
+  "title": "学析优接口",
+  "description": "学析优接口",
+  "url": "http://192.168.0.129:8102/sysManage",
+  "sampleUrl": "http://192.168.0.129:8102/sysManage",
+  "template": {
+    "jQueryAjaxSetup": {
+      "contentType": "application/json",
+      "dataType": "json"
+    }
+  }
+}
